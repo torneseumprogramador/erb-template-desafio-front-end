@@ -1,0 +1,13 @@
+<h1>Bem vindo</h1>
+<h2><%= @titulo %></h2>
+
+<ul>
+    <% @lista.each do |item| %>
+        <li><%= item %></li>
+    <% end %>
+</ul>
+
+
+<% if @verdadeiro %>
+    <div> Sim é verdadeiro </div>
+<% end %>

@@ -1,0 +1,6 @@
+<h1>Novo Produto</h1>
+<a class="btn btn-default" href="/produtos">Voltar</a>
+<hr>
+<form action="/produtos/criar" method="post">
+    <%= render "form", produto: Produto.new %>
+</form>

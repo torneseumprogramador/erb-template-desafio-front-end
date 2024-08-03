@@ -1,0 +1,32 @@
+<h1>Lista de produtos</h1>
+<a class="btn btn-primary" href="/produtos/novo">Novo</a>
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @produtos.each do |produto| %>
+            <tr>
+                <td><%= produto.id %></td>
+                <td><%= produto.nome %></td>
+                <td><%= produto.descricao %></td>
+                <td><%= produto.preco %></td>
+                <td class="row">
+                    <div class="col-6">
+                        <a href="/produtos/<%= produto.id %>" class="btn btn-warning">Alterar</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="/produtos/<%= produto.id %>/excluir" class="btn btn-danger" onclick="return confirm('Confirma?')">Excluir</a>
+                    </div>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

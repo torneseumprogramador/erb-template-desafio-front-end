@@ -1,0 +1,13 @@
+<div class="mb-3">
+<label for="name" class="form-label">Nome</label>
+<input type="text" class="form-control" id="name" value="<%= produto.nome %>" name="nome" required>
+</div>
+<div class="mb-3">
+<label for="description" class="form-label">Descrição</label>
+<textarea class="form-control" id="description" name="descricao" rows="3"><%= produto.descricao %></textarea>
+</div>
+<div class="mb-3">
+<label for="price" class="form-label">Preço</label>
+<input type="number" class="form-control" id="price" name="preco" value="<%= produto.preco %>" required step="0.01">
+</div>
+<button type="submit" class="btn btn-primary">Enviar</button>
